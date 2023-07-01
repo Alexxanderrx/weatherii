@@ -8,7 +8,21 @@ export default function Home() {
   const [dataRecup, setDataRecup] = useState(null);
   const [dataWeather, setDataWeather] = useState(null);
   const [dataFore, setDataFore] = useState(null);
+  const [today, setToday] = useState(new Date().getDate());
+  const [todaySem, setTodaySem] = useState(new Date().getDay());
+  const [monthAct, setMonthAct] = useState(new Date().getMonth() + 1);
 
+  const [diaD, setDiaD] = useState('');
+  const [mesD, setMesD] = useState('');
+
+  const [diaT, setDiaT] = useState('');
+  const [mesT, setMesT] = useState('');
+
+  const [diaCu, setDiaCu] = useState('');
+  const [mesCu, setMesCu] = useState('');
+
+  const [diaCi, setDiaCi] = useState('');
+  const [mesCi, setMesCi] = useState('');
   let ciudad = "";
   useEffect(() => {
     async function getData() {
@@ -71,21 +85,7 @@ export default function Home() {
   const DAYS = ["Sun", "Mon", "Tue", "Wen", "Thu", "Fri", "Sat"];
   const MONTHS = ["Mes_default_porque_lee_de_1a12", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-  const [today, setToday] = useState(new Date().getDate());
-  const [todaySem, setTodaySem] = useState(new Date().getDay());
-  const [monthAct, setMonthAct] = useState(new Date().getMonth() + 1);
 
-  const [diaD, setDiaD] = useState('');
-  const [mesD, setMesD] = useState('');
-
-  const [diaT, setDiaT] = useState('');
-  const [mesT, setMesT] = useState('');
-
-  const [diaCu, setDiaCu] = useState('');
-  const [mesCu, setMesCu] = useState('');
-
-  const [diaCi, setDiaCi] = useState('');
-  const [mesCi, setMesCi] = useState('');
   // const fecha = new Date();
   // const today = fecha.getDate();
   // const todaySem = fecha.getDay();
