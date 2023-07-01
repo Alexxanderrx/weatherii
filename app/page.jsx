@@ -25,6 +25,26 @@ export default function Home() {
       setDataFore(dataF);
     }
     getData();
+
+    const fechaD = new Date();
+    fechaD.setDate(fechaD.getDate() + 2);
+    setDiaD(fechaD.getDate());
+    setMesD(fechaD.getMonth() + 1);
+
+    const fechaT = new Date();
+    fechaT.setDate(fechaT.getDate() + 3);
+    setDiaT(fechaT.getDate());
+    setMesT(fechaT.getMonth() + 1);
+
+    const fechaCu = new Date();
+    fechaCu.setDate(fechaCu.getDate() + 4);
+    setDiaCu(fechaCu.getDate());
+    setMesCu(fechaCu.getMonth() + 1);
+
+    const fechaCi = new Date();
+    fechaCi.setDate(fechaCi.getDate() + 5);
+    setDiaCi(fechaCi.getDate());
+    setMesCi(fechaCi.getMonth() + 1);
   }, []);
   console.log(dataRecup);
   console.log(dataWeather);
@@ -51,30 +71,45 @@ export default function Home() {
   const DAYS = ["Sun", "Mon", "Tue", "Wen", "Thu", "Fri", "Sat"];
   const MONTHS = ["Mes_default_porque_lee_de_1a12", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-  const fecha = new Date();
-  const today = fecha.getDate();
-  const todaySem = fecha.getDay();
-  const monthAct = fecha.getMonth() + 1;
+  const [today, setToday] = useState(new Date().getDate());
+  const [todaySem, setTodaySem] = useState(new Date().getDay());
+  const [monthAct, setMonthAct] = useState(new Date().getMonth() + 1);
 
-  const fechaD = new Date();
-  fechaD.setDate(fechaD.getDate() + 2);
-  const diaD = fechaD.getDate();
-  const mesD = fechaD.getMonth() + 1;
+  const [diaD, setDiaD] = useState('');
+  const [mesD, setMesD] = useState('');
 
-  const fechaT = new Date();
-  fechaT.setDate(fechaT.getDate() + 3);
-  const diaT = fechaT.getDate();
-  const mesT = fechaT.getMonth() + 1;
+  const [diaT, setDiaT] = useState('');
+  const [mesT, setMesT] = useState('');
 
-  const fechaCu = new Date();
-  fechaCu.setDate(fechaCu.getDate() + 4);
-  const diaCu = fechaCu.getDate();
-  const mesCu = fechaCu.getMonth() + 1;
+  const [diaCu, setDiaCu] = useState('');
+  const [mesCu, setMesCu] = useState('');
 
-  const fechaCi = new Date();
-  fechaCi.setDate(fechaCi.getDate() + 5);
-  const diaCi = fechaCi.getDate();
-  const mesCi = fechaCi.getMonth() + 1;
+  const [diaCi, setDiaCi] = useState('');
+  const [mesCi, setMesCi] = useState('');
+  // const fecha = new Date();
+  // const today = fecha.getDate();
+  // const todaySem = fecha.getDay();
+  // const monthAct = fecha.getMonth() + 1;
+
+  // const fechaD = new Date();
+  // fechaD.setDate(fechaD.getDate() + 2);
+  // const diaD = fechaD.getDate();
+  // const mesD = fechaD.getMonth() + 1;
+
+  // const fechaT = new Date();
+  // fechaT.setDate(fechaT.getDate() + 3);
+  // const diaT = fechaT.getDate();
+  // const mesT = fechaT.getMonth() + 1;
+
+  // const fechaCu = new Date();
+  // fechaCu.setDate(fechaCu.getDate() + 4);
+  // const diaCu = fechaCu.getDate();
+  // const mesCu = fechaCu.getMonth() + 1;
+
+  // const fechaCi = new Date();
+  // fechaCi.setDate(fechaCi.getDate() + 5);
+  // const diaCi = fechaCi.getDate();
+  // const mesCi = fechaCi.getMonth() + 1;
 
   return (
     <main className={styles.main}>
