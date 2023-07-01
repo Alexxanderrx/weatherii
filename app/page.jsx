@@ -29,9 +29,6 @@ export default function Home() {
   console.log(dataRecup);
   console.log(dataWeather);
   console.log(dataFore);
-  // console.log((dataWeather && dataWeather.main.temp) - 273.15);
-  // console.log(typeof (dataWeather && dataWeather.main.temp));
-
 
   const [open, setOpen] = useState(true);
   const OpenUp = () => {
