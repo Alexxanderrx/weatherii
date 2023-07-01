@@ -138,6 +138,7 @@ export default function Home() {
       </section>
       {/* ----------------------------boxToday--------------------------------------------------- */}
       <div className={styles.boxToday}>
+        {/* prueba2 */}
         {/* ------------------------------BUTTONS---------------------------------------------- */}
         <div className='container d-flex justify-content-end align-items-end' style={{
           // border: "1px solid green",
